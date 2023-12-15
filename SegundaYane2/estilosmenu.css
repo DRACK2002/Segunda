@@ -1,0 +1,60 @@
+/* Mapa */
+#map {
+  height: 90vh;
+  width: 100vw;
+}
+
+/* Título */
+h1 {
+  color: rgb(60, 255, 0);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
+
+/* Formulario */
+form {
+  color: rgb(0, 255, 136);
+  text-align: center;
+}
+
+/* Menú desplegable */
+select {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+/* Botones */
+button {
+  padding: 10px 20px;
+  background: rgb(23, 187, 17);
+  background: linear-gradient(0deg, rgba(23, 187, 17) 0%, rgba(23, 187, 17) 200%);
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgb(23, 187, 17);
+  background: linear-gradient(0deg, rgba(23, 187, 17) 0%, rgba(23, 187, 17) 100%);
+}
+
+/* Campos de entrada */
+#lat, #lng {
+  padding: 10px 40px;
+  background-color: #97b398;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-image: url('Icons/ubicacion1.png'); /* Reemplaza 'ruta/del/icono' con la ruta de tu icono de búsqueda */
+  background-repeat: no-repeat;
+  background-position: 10px center; /* Ajusta la posición del icono */
+  background-size: 20px; /* Ajusta el tamaño del icono */
+}
+
+#lat:hover, #lng:hover {
+  background-color: #9dcf9f;
+}
+
+#lat:active, #lng:active {
+  background-color: #a1c7a3;
+}

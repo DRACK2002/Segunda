@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- Declaración del tipo de documento y idioma -->
+<html lang="en">
+
+<head>
+    <!-- Configuración del encabezado del documento -->
+    <meta charset="UTF-8"> <!-- Configuración de la codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración de la vista en dispositivos móviles -->
+    <title>APIS</title> <!-- Título de la página -->
+    <!-- Enlaces a hojas de estilo externas -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="estilosmenu.css"> <!-- Enlace a una hoja de estilos local -->
+</head>
+
+<body>
+    <!-- Cuerpo de la página -->
+    <h1>API Maps y Firebase</h1> <!-- Encabezado principal -->
+    <form id="coord-form">
+        <!-- Formulario para ingresar coordenadas y seleccionar tipo de servicio -->
+        <input type="text" id="lat" placeholder="Latitud"> <!-- Campo de entrada para la latitud -->
+        <input type="text" id="lng" placeholder="Longitud"> <!-- Campo de entrada para la longitud -->
+
+        <label for="tipoServicio"><i class="fas fa-tools"></i> Select:</label> <!-- Etiqueta para el selector de tipo de servicio -->
+        <select id="tipoServicio" name="tipoServicio">
+            <!-- Selector de tipo de servicio con opciones -->
+            <option value="farmacias"><i class="fas fa-medkit"></i> Farmacias</option>
+            <option value="hospitales"><i class="fas fa-hospital"></i> Hospitales</option>
+            <option value="seguridadPublica"><i class="fas fa-shield-alt"></i> Seguridad Publica</option>
+            <option value="bomberos"><i class="fas fa-fire-extinguisher"></i> Bomberos</option>
+        </select><br><br>
+
+        <!-- Botones para buscar, guardar y limpiar datos -->
+        <button type="button" onclick="ubicar()" id="locate-button">Buscar</button>
+        <button type="submit" id="Btn" class="button is-success">Guardar</button>
+        <button type="button" onclick="limpiar()" id="limpiar-button">Limpiar</button>
+    </form>
+    <!-- Contenedor del mapa -->
+    <div id="map" style="width: 100%; height: 70vh;"></div>
+
+    <!-- Inclusión de scripts JavaScript -->
+    <!-- Se incluyen las bibliotecas Leaflet y archivos JavaScript necesarios -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin="anonymous"></script>
+    <script src="mapaInicializacion.js"></script> <!-- Inicialización del mapa -->
+    <script src="ubicarLugar.js"></script> <!-- Función para ubicar lugares en el mapa -->
+    <script type="module" src='guardarDatos.js'></script> <!-- Script para guardar datos -->
+    <script src="limpiarDatos.js"></script> <!-- Función para limpiar datos del formulario -->
+    <script src="mapa.js"></script> <!-- Funciones relacionadas con el mapa -->
+</body>
+
+</html>
